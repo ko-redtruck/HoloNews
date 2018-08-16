@@ -29,3 +29,11 @@ user with verified identity: <b>X</b>
 - Image/ Video Storage/Hosting: IPFS 
 - Identity Verification: Civic or Holochain
 - Monetization: Oyster + Donations (ETH, BITCOIN, Currency on Holochain)
+
+### Architecture
+
+#### 1. Zomes 
+
+- identity: responsible for identity verification
+- monetization: provide a way to monetize content
+- posting: post, comment and vote
