@@ -3,7 +3,7 @@
     "UUID": "12bec925-a150-11e8-ac4b-7a7919487dc3",
     "Name": "HoloNews",
     "Properties": {
-        "description": "provides an application template",
+        "description": "Global Social Network for international politics and news",
         "language": "en"
     },
     "PropertiesSchemaFile": "properties_schema.json",
@@ -19,37 +19,45 @@
     },
     "Zomes": [
         {
-            "Name": "sampleZome",
-            "Description": "provide a sample zome",
-            "CodeFile": "sampleZome.js",
+            "Name": "identity",
+            "Description": "manage identity verification",
+            "CodeFile": "identity.js",
             "RibosomeType": "js",
             "BridgeFuncs": null,
             "Config": null,
             "Entries": [
-                {
-                    "Name": "sampleEntry",
-                    "DataFormat": "json",
-                    "Schema": "",
-                    "SchemaFile": "sampleEntry.json",
-                    "Sharing": "public"
-                }
+
             ],
             "Functions": [
-                {
-                    "Name": "sampleEntryCreate",
-                    "CallingType": "json",
-                    "Exposure": "public"
-                },
-                {
-                    "Name": "sampleEntryRead",
-                    "CallingType": "json",
-                    "Exposure": "public"
-                },
-                {
-                    "Name": "doSampleAction",
-                    "CallingType": "json",
-                    "Exposure": "public"
-                }
+
+            ]
+        },
+        {
+            "Name": "monetization",
+            "Description": "Provide a way to monetize content",
+            "CodeFile": "monetization.js",
+            "RibosomeType": "js",
+            "BridgeFuncs": null,
+            "Config": null,
+            "Entries": [
+
+            ],
+            "Functions": [
+
+            ]
+        },
+        {
+            "Name": "posting",
+            "Description": "Handle all actions around posting, commenting, voting",
+            "CodeFile": "posting.js",
+            "RibosomeType": "js",
+            "BridgeFuncs": null,
+            "Config": null,
+            "Entries": [
+
+            ],
+            "Functions": [
+
             ]
         }
     ]
