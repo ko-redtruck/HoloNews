@@ -1,0 +1,31 @@
+# HoloNews 
+
+<b>Global Social Network for international politics and news.</b>
+
+## <b>Fundamental Values</b>
+
+#### 1. Freedom of Speech
+#### 2. Equality
+
+## <b>Goals</b>
+
+#### 1. Provide a equal, free and uncensored access to information 
+#### 2. Prevent manipulation in elections
+
+### User Types
+
+outside reader/ normal user: <b>Y</b>
+
+user with verified identity: <b>X</b>
+
+- read: Y,X
+- upvote: X
+- comment: X
+- post: X
+
+### Technology Stack 
+
+- Network: Holochain
+- Image/ Video Storage/Hosting: IPFS 
+- Identity Verification: Civic or Holochain
+- Monetization: Oyster + Donations (ETH, BITCOIN, Currency on Holochain)
