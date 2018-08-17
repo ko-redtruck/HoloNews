@@ -11,6 +11,7 @@
 
 #### 1. Provide a equal, free and uncensored access to information 
 #### 2. Prevent manipulation in elections
+#### 3. Create a human friendly design (http://humanetech.com)
 
 ### User Types
 
