@@ -1,6 +1,11 @@
 //data construct
+
 var data = {
+  //elements of the post upload
   postBody:"",
+  postTitle: "",
+  postImage: "",
+  //post array containing all uploaded posts
   posts:[]
 }
 
@@ -11,7 +16,13 @@ Vue.component("post-feed",{
       required: true
     }
   },
-  template: "<h3>{{post.Entry.body}}</h3>"
+  template: `
+    <div class="post-window">
+      <h3>{{post.Entry.title}}</h3>
+      <p>{{post.Entry.body}}</p>
+      <img v-bind:src="post.Entry.imageSrc"/>
+    </div>
+  `
 })
 
 var vm = new Vue({
@@ -19,14 +30,18 @@ var vm = new Vue({
   data: data,
   methods: {
     uploadPost: uploadPost,
-    loadPosts: loadPosts
+    loadPosts: loadPosts,
+    onFileChanged: onFileChanged
   }
 })
 
 function uploadPost() {
   //post schema
   var postData = {
-    "body": data.postBody
+    //data.postBody == vm.postBody
+    "body": data.postBody,
+    "title": data.postTitle,
+    "imageSrc": data.postImage.src
   }
 
   //call the post function in the zome "posting"
@@ -38,4 +53,21 @@ function loadPosts() {
   request("posting","getPostsTemp","",function (posts) {
     vm.posts= JSON.parse(posts);
   })
+}
+
+function onFileChanged(event) {
+  return createImage(event.target.files[0])
+}
+
+//creates/ reads image src from file
+function createImage(file) {
+  var reader = new FileReader();
+
+  reader.onloadend = function () {
+    image.onload = function () {
+      data.postImage = image;
+    }
+    image.src = reader.result;
+  }
+  reader.readAsDataURL(file);
 }

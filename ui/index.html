@@ -5,6 +5,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="request.js"></script>
+
     <title>Page Title</title>
   </head>
   <body>
@@ -18,7 +19,16 @@
         {{postBody}}
       </p>
       <br/>
-      <textarea v-model="postBody"></textarea>
+      <input placeholder="Your Title" v-model="postTitle" />
+      <textarea placeholder="Write your story here" v-model="postBody"></textarea>
+
+      <div v-if="!postImage">
+        <h3>Select an image</h3>
+        <input type="file" v-on:change="onFileChanged" />
+      </div>
+
+      <img v-else v-bind:src="postImage.src" />
+
       <button v-on:click="uploadPost">Upload Post</button>
       <button v-on:click="loadPosts">Load Posts</button>
 
