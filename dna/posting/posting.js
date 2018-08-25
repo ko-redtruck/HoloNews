@@ -29,7 +29,7 @@ function validateLink() {
 
 function post(postData) {
   //all user post with their real idenity therefore the post should be linked to their name and not a hash
-  var authorName = "NamePlaceholder";
+  var authorName = App.Agent.Hash;
   //commit post to the public DHT
   //all the text should be stored on the DHT
   //pictures and videos will be stored on IPFS/(Filecoin) --> only links are stored in Holochain
@@ -42,4 +42,17 @@ function post(postData) {
   });
 
   return postHash;
+}
+
+//temporary function
+function getPostsTemp() {
+  var linkEntries = getLinks(App.Agent.Hash,"post");
+  var posts = new Array();
+  var key = 0;
+  linkEntries.forEach(function (linkEntry) {
+    posts.push({"Hash":linkEntry.Hash,"Key":key,"Entry":get(linkEntry.Hash)});
+    key += 1;
+  });
+  // do some sorting
+  return JSON.stringify(posts);
 }

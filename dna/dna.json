@@ -54,9 +54,29 @@
             "BridgeFuncs": null,
             "Config": null,
             "Entries": [
+              {
+                "Name": "post",
+                "DataFormat": "json",
+                "Sharing": "public",
+                "SchemaFile": "post.json"
+              },
+              {
+                "Name": "post_links",
+                "DataFormat": "links"
+              }
 
             ],
             "Functions": [
+              {
+                "Name": "post",
+                "CallingType": "json",
+                "Exposure": "public"
+              },
+              {
+                "Name": "getPostsTemp",
+                "CallingType": "string",
+                "Exposure": "public"
+              }
 
             ]
         }
