@@ -13,6 +13,13 @@
 #### 2. Prevent manipulation in elections
 #### 3. Create a human friendly design (http://humanetech.com)
 
+#### Instructions
+
+1. run hcdev web for backend api server 
+2. run npm start in ui-src for the ui 
+3. connect to localhost:8080
+
+
 ### User Types
 
 outside reader/ normal user: <b>Y</b>
