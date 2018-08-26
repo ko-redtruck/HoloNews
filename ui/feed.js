@@ -4,7 +4,7 @@ var data = {
   //elements of the post upload
   postBody:"",
   postTitle: "",
-  postImage: "",
+  postImageSrc: "",
   //post array containing all uploaded posts
   posts:[]
 }
@@ -41,7 +41,7 @@ function uploadPost() {
     //data.postBody == vm.postBody
     "body": data.postBody,
     "title": data.postTitle,
-    "imageSrc": data.postImage.src
+    "imageSrc": data.postImageSrc
   }
 
   //call the post function in the zome "posting"
@@ -64,10 +64,7 @@ function createImage(file) {
   var reader = new FileReader();
 
   reader.onloadend = function () {
-    image.onload = function () {
-      data.postImage = image;
-    }
-    image.src = reader.result;
+    data.postImageSrc =  reader.result;
   }
   reader.readAsDataURL(file);
 }
