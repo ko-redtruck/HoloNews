@@ -59,6 +59,8 @@ function onFileChanged(event) {
   return createImage(event.target.files[0])
 }
 
+
+
 //creates/ reads image src from file
 function createImage(file) {
   var reader = new FileReader();
@@ -68,3 +70,11 @@ function createImage(file) {
   }
   reader.readAsDataURL(file);
 }
+
+const node = new Ipfs({ repo: 'ipfs-' + Math.random() })
+    node.once('ready', () => {
+      console.log('Online status: ', node.isOnline() ? 'online' : 'offline')
+      // You can write more code here to use it. Use methods like
+      // node.files.add, node.files.get. See the API docs here:
+      // https://github.com/ipfs/interface-ipfs-core
+    })

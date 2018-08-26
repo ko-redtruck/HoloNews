@@ -1,4 +1,4 @@
-# HoloNews 
+# HoloNews
 
 <b>Global Social Network for international politics and news.</b>
 
@@ -9,15 +9,9 @@
 
 ## <b>Goals</b>
 
-#### 1. Provide a equal, free and uncensored access to information 
+#### 1. Provide a equal, free and uncensored access to information
 #### 2. Prevent manipulation in elections
 #### 3. Create a human friendly design (http://humanetech.com)
-
-## Instructions
-
-1. run hcdev web for backend api server 
-2. run npm start in ui-src for the ui 
-3. connect to localhost:8080
 
 
 ### User Types
@@ -31,16 +25,16 @@ user with verified identity: <b>X</b>
 - comment: X
 - post: X
 
-### Technology Stack 
+### Technology Stack
 
 - Network: Holochain
-- Image/ Video Storage/Hosting: IPFS 
+- Image/ Video Storage/Hosting: IPFS
 - Identity Verification: Civic or Holochain
 - Monetization: Oyster + Donations (ETH, BITCOIN, Currency on Holochain)
 
 ### Architecture
 
-#### 1. Zomes 
+#### 1. Zomes
 
 - identity: responsible for identity verification
 - monetization: provide a way to monetize content
