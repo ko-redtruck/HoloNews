@@ -21,7 +21,7 @@ Vue.component("post-feed",{
   template: `
     <div class="post-window">
       <h3>{{post.Entry.title}}</h3>
-      <p>{{post.Entry.body}}</p>
+      <div v-html="post.Entry.body"></div>
       <img v-bind:src="imageSrc"  />
     </div>
   `,
@@ -38,6 +38,7 @@ Vue.component("post-feed",{
   }
 })
 
+// vue setup
 var vm = new Vue({
   el: "#app",
   data: data,
@@ -45,9 +46,18 @@ var vm = new Vue({
     uploadPost: uploadPost,
     loadPosts: loadPosts,
     onFileChanged: onFileChanged
+  },
+  computed: {
+    converter: function () {
+      return new showdown.Converter();
+    },
+    markDownHTML : function () {
+      return this.converter.makeHtml(data.postBody);
+    }
   }
 })
 
+// ipfs setup
 if (window.ipfs) {
   console.log("window.ipfs is active")
   const node = window.ipfs;
@@ -58,14 +68,17 @@ if (window.ipfs) {
     console.log("no ipfs browser plugin found")
 }
 
+
 function uploadPost() {
+  console.log(this.markDownHTML)
+  console.log(this.markDownHTML.valueOf())
   //firstly uploads all images and videos to IPFS
   //then commits the rest to the public DHT
   //configure all the data that will be commited to the DHT
   //Holochain post schema
   var postData = {
     //data.postBody == vm.postBody
-    "body": data.postBody,
+    "body": this.markDownHTML,
     "title": data.postTitle,
     "postImageHashes": data.postImageHashes
   }

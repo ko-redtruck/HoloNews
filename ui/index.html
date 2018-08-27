@@ -3,10 +3,8 @@
   <head>
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <!-- ipfs-js script 
-    <script src="https://cdn.jsdelivr.net/npm/ipfs/dist/index.min.js"></script>
-  -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js"></script>
     <script src="request.js"></script>
     <script src="helper/base64ArrayBuffer.js"></script>
 
@@ -19,9 +17,8 @@
 
     <div id="app">
       <span>Post Preview</span>
-      <p style="white-space: pre-line;">
-        {{postBody}}
-      </p>
+      <div v-html="markDownHTML"></div>
+
       <br/>
       <input placeholder="Your Title" v-model="postTitle" />
       <textarea placeholder="Write your story here" v-model="postBody"></textarea>
