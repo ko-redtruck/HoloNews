@@ -16,7 +16,7 @@ Vue.component("post-feed",{
     post: {
       type: Object,
       required: true
-    }x
+    }
   },
   template: `
     <div class="post-window">
