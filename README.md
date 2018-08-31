@@ -1,18 +1,22 @@
-# HoloNews
+# HoloNews 
 
-<b>Global Social Network for international politics and news.</b>
+<b>Global Social Media Network for international politics and news.</b>
 
 ## <b>Fundamental Values</b>
 
-#### 1. Freedom of Speech
-#### 2. Equality
+#### 1. Unconditional Freedom of Speech
+#### 2. Accountability for what you say
+#### 3. Equal power for all users
+#### 4. Free access to the network
+#### 5. Human friendly design (http://humanetech.com)
 
-## <b>Goals</b>
+## Description
 
-#### 1. Provide a equal, free and uncensored access to information
-#### 2. Prevent manipulation in elections
-#### 3. Create a human friendly design (http://humanetech.com)
+This network does not only show articles from big media organisations but also allows normal every day citizen to post. However, users or organisations who want to post have to first verify their real identity. Everyone has the freedom to express their opinion freely but in turn they have to reveal their real identity. Posts will be deletable or can be edited but users will see a warning does something was deleted or edited.
 
+## Potential Problems
+
+- Users will abuse the platform by posting something unethical or illigeal not related to politics or news
 
 ### User Types
 
