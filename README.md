@@ -2,6 +2,8 @@
 
 <b>Global Social Media Network for international politics and news.</b>
 
+A mix of Google News and Facebook
+
 ## <b>Fundamental Values</b>
 
 #### 1. Unconditional Freedom of Speech
